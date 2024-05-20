@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<meta id="meta_og_image" property="og:image" content="img/og_image.png">
+<title></title>
+<style>
+body { margin:0; padding:0 }
+.wrap { width: 100%;height: 100vh; text-align:center;overflow-X: hidden; }
+.wrap img { max-width: 1920px;border:0; text-align:center;}
+@media screen and (max-width: 1903px) {
+	.wrap img {max-width: 100%;}
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+	<img src="img/preview01-01.png" alt="" class="main_bg" data-main="1">
+</div>
+<script>
+
+$('.main_bg').on('click',function () {
+  const mainImg = $('.main_bg').data('main');
+  switch (mainImg) {
+	case 1 :
+	  $('.main_bg').prop({'src':'img/preview01-02.png'})
+	  $('.main_bg').data('main', 2)
+	  break;
+		case 2 :
+	  $('.main_bg').prop({'src':'img/preview01-03.png'})
+	  $('.main_bg').data('main', 3)
+	  break;
+		case 3 :
+	  $('.main_bg').prop({'src':'img/preview01-04.png'})
+	  $('.main_bg').data('main', 4)
+	  break;				
+	default :
+	  $('.main_bg').prop({'src':'img/preview01-01.png'})
+	  $('.main_bg').data('main', 1)
+  }
+})
+</script>
+
+</body>
+</html>

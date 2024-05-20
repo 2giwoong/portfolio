@@ -112,6 +112,7 @@ const header = select('.js-header')
 const introPattern1 = select('.js-intro-pattern1')
 const introPattern2 = select('.js-intro-pattern2')
 const introPattern3 = select('.js-intro-pattern3')
+const introPattern4 = select('.js-intro-pattern4')
 const introText = select('.js-intro-text')
 const building = select('.js-building')
 const buildingBg = select('.js-building-bg')
@@ -157,6 +158,7 @@ function setAnimation () {
   gsap.set(introPattern1, {  autoAlpha: 0  } )
   gsap.set(introPattern2, {  autoAlpha: 0  } )
   gsap.set(introPattern3, {  autoAlpha: 0  } )
+  gsap.set(introPattern4, {  autoAlpha: 0  } )
 
   gsap.set(buildingBg, { yPercent: 100, autoAlpha: 0 })
   gsap.set(building, { autoAlpha: 0 })
@@ -178,6 +180,7 @@ function loadingScreenReveal () {
   tl.to(introPattern1, { autoAlpha: 1 }, '<.4')
   tl.to(introPattern2, { autoAlpha: 1}, '<.4')
   tl.to(introPattern3, {  autoAlpha: 1 }, '<.4')
+  tl.to(introPattern4, {  autoAlpha: 1 }, '<.4')
 
   tl.to(firstSection, { autoAlpha: 0 }, '<1')
   tl.to(mainSection, { display: 'block', autoAlpha: 1}, '<.5')
