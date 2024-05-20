@@ -331,25 +331,48 @@
         CONTACT US
       </h1>
     </header>
-    <ul class="contact-list">
-      <li class="contact-item">
-        <input id="sendername" type="text" placeholder="이름을 입력해주세요"  />
-      </li>
-      <li class="contact-item" >
-        <input id="to" type="text" placeholder="이메일 주소를 입력해주세요"  />
-      </li>
-      <li class="contact-item" >
-        <input id="subject" type="text" placeholder="제목을 입력해주세요"  />
-      </li>
-      <li class="contact-item">
-        <textarea id="message" placeholder="내용을 입력해주세요" cols="40" rows="8"></textarea> 
-      </li>
-      <li class="contact-item">
-        <button onclick = "sendMail();">보내기</button>
-      </li>
-    </ul> 
+    <form class="contact-form" onsubmit="event.preventDefault();">
+      <ul class="contact-list">
+        <li class="contact-item">
+          <input id="sendername" type="text" placeholder="이름을 입력해주세요"  />
+        </li>
+        <li class="contact-item" >
+          <input id="to" type="text" placeholder="이메일 주소를 입력해주세요"  />
+        </li>
+        <li class="contact-item" >
+          <input id="subject" type="text" placeholder="제목을 입력해주세요"  />
+        </li>
+        <li class="contact-item">
+          <textarea id="message" placeholder="내용을 입력해주세요" cols="40" rows="8"></textarea> 
+        </li>
+        <li class="contact-item">
+          <button onclick = "sendMail();">보내기</button>
+        </li>
+      </ul> 
+    </form>
+
     <script>
       function sendMail() {
+        var sendernameInput = document.querySelector("#sendername");
+        var toInput = document.querySelector("#to");
+        var subjectInput = document.querySelector("#subject");
+        var messageInput = document.querySelector("#message");
+        if (!sendernameInput.value) {
+          alert('이름을 입력해주세요:)');
+          return;
+        }
+        if (!toInput.value || !toInput.validity.valid) {
+          alert('올바른 이메일 주소를 입력해주세요:)');
+          return;
+        }
+        if (!subjectInput.value) {
+          alert('제목을 입력해주세요:)');
+          return;
+        }
+        if (!messageInput.value) {
+          alert('내용을 입력해주세요:)');
+          return;
+        }
         (function () {
           emailjs.init("xTC0zespIoLD7WYhD");
         })();
@@ -365,6 +388,7 @@
         emailjs.send(serviceID, templateID, params).then(
           res => {
             alert('연락주셔서 감사합니다:)');
+            document.querySelector(".contact-form").reset();
           }
         )
         .catch();

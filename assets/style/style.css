@@ -1739,8 +1739,15 @@ img[draggable=false] {
 }
 
 .main-section-contact .contact-list .contact-item {
+  position: relative;
   width: 100%;
   height: 100%;
+}
+.main-section-contact .contact-list .contact-item span {
+  position: absolute;
+  display: none;
+  right: 0;
+  font-size: 14px;
 }
 .main-section-contact .contact-list .contact-item input {
   width: 100%;
