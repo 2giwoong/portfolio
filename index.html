@@ -345,13 +345,13 @@
         <textarea id="message" placeholder="내용을 입력해주세요" cols="40" rows="8"></textarea> 
       </li>
       <li class="contact-item">
-        <button onclick="sendMail();">보내기</button>
+        <button onclick = "sendMail();">보내기</button>
       </li>
     </ul> 
     <script>
       function sendMail() {
-        (function() {
-          emailjs.init("AQaS7naopk-1PlXk6")
+        (function () {
+          emailjs.init("xTC0zespIoLD7WYhD");
         })();
         var params = {
           sendername: document.querySelector("#sendername").value,
@@ -370,52 +370,7 @@
         .catch();
       }
     </script>
-    <!--<form id="sendEmail">
-      <ul class="contact-list">
-        <li class="contact-item" data-aos="fade-up" data-aos-delay="200">
-          <input type="text" placeholder="이름을 입력해주세요" id="fullName" required/>
-        </li>
-        <li class="contact-item" data-aos="fade-up" data-aos-delay="200">
-          <input type="text" placeholder="이메일 주소를 입력해주세요" id="email_id" required/>
-        </li>
-        <li class="contact-item" data-aos="fade-up" data-aos-delay="200">
-          <textarea placeholder="내용을 입력해주세요" id="message" required></textarea> 
-        </li>
-        <li class="contact-item" data-aos="fade-up" data-aos-delay="200">
-          <button type="submit">작성</button>
-        </li>
-      </ul>
-    </form>
-    <div id="contactContainer">
-    </div>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-      (function(){
-        emailjs.init("AQaS7naopk-1PlXk6");
-      })();
-    </script>
-    <script type="text/javascript">
-      const emailForm = document.getElementById('sendEmail');
-      const contactContainer = document.getElementById('contactContainer');
-      function SendMail(event) {
-          event.preventDefault();
-          var params = {
-              email_id: document.getElementById('email_id').value,
-              message: document.getElementById('message').value,
-              to_name: 'giwoong',
-              from_name: document.getElementById('fullName').value
-          };
-          emailjs
-              .send("service_id", "template_id", params)
-              .then(function (res) {
-                  contactContainer.querySelector('[rel="step1"]').classList.remove('visible');
-                  contactContainer.querySelector('[rel="step2"]').classList.add('visible');
-              });
-      }
-      emailForm.addEventListener('submit', SendMail);
-
-    </script>
-  </article>-->
+  </article>
 </main>
 
 <div class="js-modal">
