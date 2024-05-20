@@ -16,63 +16,63 @@
 @font-face {
   font-family: "LEMONMILK";
   font-weight: 300;
-  src: url("/assets/fonts/LEMONMILK-Light.woff2") format("woff2"), url("/assets/fonts/LEMONMILK-Light.woff") format("woff"), url("/assets/fonts/LEMONMILK-Light.ttf") format("opentype");
+  src: url("../fonts/LEMONMILK-Light.woff2") format("woff2"), url("../fonts/LEMONMILK-Light.woff") format("woff"), url("../fonts/LEMONMILK-Light.ttf") format("opentype");
 }
 
 @font-face {
   font-family: "LEMONMILK";
   font-weight: 400;
-  src: url("/assets/fonts/LEMONMILK-Regular.woff2") format("woff2"), url("/assets/fonts/LEMONMILK-Regular.woff") format("woff"), url("/assets/fonts/LEMONMILK-Regular.ttf") format("opentype");
+  src: url("../fonts/LEMONMILK-Regular.woff2") format("woff2"), url("../fonts/LEMONMILK-Regular.woff") format("woff"), url("../fonts/LEMONMILK-Regular.ttf") format("opentype");
 }
 
 @font-face {
   font-family: "LEMONMILK";
   font-weight: 500;
-  src: url("/assets/fonts/LEMONMILK-Medium.woff2") format("woff2"), url("/assets/fonts/LEMONMILK-Medium.woff") format("woff"), url("/assets/fonts/LEMONMILK-Medium.ttf") format("opentype");
+  src: url("../fonts/LEMONMILK-Medium.woff2") format("woff2"), url("../fonts/LEMONMILK-Medium.woff") format("woff"), url("../fonts/LEMONMILK-Medium.ttf") format("opentype");
 }
 
 @font-face {
   font-family: "NotoSansKR";
   font-weight: 200;
-  src: url("/assets/fonts/NotoSansKR-Thin.eot");
-  src: url("/assets/fonts/NotoSansKR-Thin.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/NotoSansKR-Thin.woff2") format("woff2"), url("/assets/fonts/NotoSansKR-Thin.woff") format("woff"), url("/assets/fonts/NotoSansKR-Thin.otf") format("opentype");
+  src: url("../fonts/NotoSansKR-Thin.eot");
+  src: url("../fonts/NotoSansKR-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Thin.woff2") format("woff2"), url("../fonts/NotoSansKR-Thin.woff") format("woff"), url("../fonts/NotoSansKR-Thin.otf") format("opentype");
 }
 
 @font-face {
   font-family: "NotoSansKR";
   font-weight: 300;
-  src: url("/assets/fonts/NotoSansKR-Light.eot");
-  src: url("/assets/fonts/NotoSansKR-Light.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/NotoSansKR-Light.woff2") format("woff2"), url("/assets/fonts/NotoSansKR-Light.woff") format("woff"), url("/assets/fonts/NotoSansKR-Light.otf") format("opentype");
+  src: url("../fonts/NotoSansKR-Light.eot");
+  src: url("../fonts/NotoSansKR-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Light.woff2") format("woff2"), url("../fonts/NotoSansKR-Light.woff") format("woff"), url("../fonts/NotoSansKR-Light.otf") format("opentype");
 }
 
 /*normal*/
 @font-face {
   font-family: "NotoSansKR";
   font-weight: 400;
-  src: url("/assets/fonts/NotoSansKR-Regular.eot");
-  src: url("/assets/fonts/NotoSansKR-Regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/NotoSansKR-Regular.woff2") format("woff2"), url("/assets/fonts/NotoSansKR-Regular.woff") format("woff"), url("/assets/fonts/NotoSansKR-Regular.otf") format("opentype");
+  src: url("../fonts/NotoSansKR-Regular.eot");
+  src: url("../fonts/NotoSansKR-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Regular.woff2") format("woff2"), url("../fonts/NotoSansKR-Regular.woff") format("woff"), url("../fonts/NotoSansKR-Regular.otf") format("opentype");
 }
 
 @font-face {
   font-family: "NotoSansKR";
   font-weight: 600;
-  src: url("/assets/fonts/NotoSansKR-Medium.eot");
-  src: url("/assets/fonts/NotoSansKR-Medium.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/NotoSansKR-Medium.woff2") format("woff2"), url("/assets/fonts/NotoSansKR-Medium.woff") format("woff"), url("/assets/fonts/NotoSansKR-Medium.otf") format("opentype");
+  src: url("../fonts/NotoSansKR-Medium.eot");
+  src: url("../fonts/NotoSansKR-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Medium.woff2") format("woff2"), url("../fonts/NotoSansKR-Medium.woff") format("woff"), url("../fonts/NotoSansKR-Medium.otf") format("opentype");
 }
 
 /*bold*/
 @font-face {
   font-family: "NotoSansKR";
   font-weight: 700;
-  src: url("/assets/fonts/NotoSansKR-Bold.eot");
-  src: url("/assets/fonts/NotoSansKR-Bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/NotoSansKR-Bold.woff2") format("woff2"), url("/assets/fonts/NotoSansKR-Bold.woff") format("woff"), url("/assets/fonts/NotoSansKR-Bold.otf") format("opentype");
+  src: url("../fonts/NotoSansKR-Bold.eot");
+  src: url("../fonts/NotoSansKR-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Bold.woff2") format("woff2"), url("../fonts/NotoSansKR-Bold.woff") format("woff"), url("../fonts/NotoSansKR-Bold.otf") format("opentype");
 }
 
 @font-face {
   font-family: "NotoSansKR";
   font-weight: 800;
-  src: url("/assets/fonts/NotoSansKR-Black.eot");
-  src: url("/assets/fonts/NotoSansKR-Black.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/NotoSansKR-Black.woff2") format("woff2"), url("/assets/fonts/NotoSansKR-Black.woff") format("woff"), url("/assets/fonts/NotoSansKR-Black.otf") format("opentype");
+  src: url("../fonts/NotoSansKR-Black.eot");
+  src: url("../fonts/NotoSansKR-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Black.woff2") format("woff2"), url("../fonts/NotoSansKR-Black.woff") format("woff"), url("../fonts/NotoSansKR-Black.otf") format("opentype");
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -334,7 +334,7 @@ body.is--overflow-hidden {
 .header .header-inner .header-logo a {
   width: 160px;
   height: 75px;
-  background-image: url("/assets/images/common/logo.png");
+  background-image: url("../images/common/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
   display: block;
@@ -752,7 +752,7 @@ html.edge #custom-cursor-text.more .custom-cursor__txt {
   z-index: 4;
   left: calc(50% - 12px);
   background-repeat: no-repeat;
-  background-image: url("/assets/images/main/scroll-down-vertical.png");
+  background-image: url("../images/main/scroll-down-vertical.png");
 }
 
 .bounce-mouse {
@@ -854,7 +854,7 @@ html.edge #custom-cursor-text.more .custom-cursor__txt {
   left: 0;
   top: 0;
   overflow: hidden;
-  background-image: url("/assets/images/main/main-visual-bg.png");
+  background-image: url("../images/main/main-visual-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1341,7 +1341,7 @@ img[draggable=false] {
   width: 100%;
   box-sizing: border-box;
   padding: 306px 0 0 5.4vw;
-  background: #111111 url("/assets/images/main/location-img.png") no-repeat 100% 0;
+  background: #111111 url("../images/main/location-img.png") no-repeat 100% 0;
 }
 
 .main-section-portfolio {
@@ -1607,7 +1607,7 @@ img[draggable=false] {
   z-index: 10;
   right: 40px;
   background-repeat: no-repeat;
-  background-image: url("/assets/images/main/scroll-down-horizontal.png");
+  background-image: url("../images/main/scroll-down-horizontal.png");
 }
 
 .bounce-right-mouse {
@@ -1634,7 +1634,7 @@ img[draggable=false] {
 
 .main-section-community {
   background-color: #111111;
-  background-image: url("/assets/images/main/community-bg.png");
+  background-image: url("../images/main/community-bg.png");
   background-repeat: no-repeat;
   padding: 127px 0 117px;
   position: relative;
@@ -1779,7 +1779,7 @@ img[draggable=false] {
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
 .main-top-section {
-  background-image: url(/assets/images/main/visual-bg.png);
+  background-image: url(../images/main/visual-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   /*padding-bottom: 30vh;*/
@@ -1821,7 +1821,7 @@ img[draggable=false] {
 
 .main-section-persona {
   padding: 150px 0;
-  background-image: url(/assets/images/main/persona-img-bg.png);
+  background-image: url(../images/main/persona-img-bg.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1955,7 +1955,7 @@ img[draggable=false] {
   padding-top: 247px;
   width: 100%;
   height: 621px;
-  background-image: url(/assets/images/main/persona-text0-bg.png);
+  background-image: url(../images/main/persona-text0-bg.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
