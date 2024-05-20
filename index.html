@@ -25,8 +25,9 @@
   <script src="assets/js/vendors/jquery.rwdImageMaps.min.js"></script>
   <script src="assets/js/vendors/aos.js"></script>
   <script src="assets/js/vendors/SplitText.min.js" type="text/javascript"></script>
-  <style>
-  </style>
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 </head>
 <body>
 <header class="header js-header">
@@ -57,7 +58,7 @@
         <!--        모니터-->
         <div class="first-section-clipped js-building-clipped js-building-bg">
           <div class="first-section-clipped__content">
-            <picture class="is-hidden--no-js intro-en__building js-intro-scale js-intro-scale-bg js-intro-image"                     data-plugin="appear " draggable="false" data-reveal-old="building">
+            <picture class="is-hidden--no-js intro-desk js-intro-scale js-intro-scale-bg js-intro-image"                     data-plugin="appear " draggable="false" data-reveal-old="building">
               <img src="assets/images/main/intro-img1.png" alt="" draggable="false" class="building-img js-building-img js-rounded-img"
               >
             </picture>
@@ -330,56 +331,46 @@
         CONTACT US
       </h1>
     </header>
-    <!--<form id="form">
-      <div class="field">
-        <label for="to_name">to_name</label>
-        <input type="text" name="to_name" id="to_name">
-      </div>
-      <div class="field">
-        <label for="from_name">from_name</label>
-        <input type="text" name="from_name" id="from_name">
-      </div>
-      <div class="field">
-        <label for="message">message</label>
-        <input type="text" name="message" id="message">
-      </div>
-      <div class="field">
-        <label for="reply_to">reply_to</label>
-        <input type="text" name="reply_to" id="reply_to">
-      </div>
-    
-      <input type="submit" id="contact_button" value="Send Email" >
-    </form>
-    
-    <script type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    
-    <script type="text/javascript">
-      emailjs.init('AQaS7naopk-1PlXk6')
-    </script>
+    <ul class="contact-list">
+      <li class="contact-item">
+        <input id="sendername" type="text" placeholder="이름을 입력해주세요"  />
+      </li>
+      <li class="contact-item" >
+        <input id="to" type="text" placeholder="이메일 주소를 입력해주세요"  />
+      </li>
+      <li class="contact-item" >
+        <input id="subject" type="text" placeholder="제목을 입력해주세요"  />
+      </li>
+      <li class="contact-item">
+        <textarea id="message" placeholder="내용을 입력해주세요" cols="40" rows="8"></textarea> 
+      </li>
+      <li class="contact-item">
+        <button onclick="sendMail();">보내기</button>
+      </li>
+    </ul> 
     <script>
-      const btn = document.getElementById('contact_button');
+      function sendMail() {
+        (function() {
+          emailjs.init("AQaS7naopk-1PlXk6")
+        })();
+        var params = {
+          sendername: document.querySelector("#sendername").value,
+          to: document.querySelector("#to").value,
+          subject: document.querySelector("#subject").value,
+          message: document.querySelector("#message").value,
+        }
 
-      document.getElementById('form')
-      .addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        btn.value = 'Sending...';
-
-        const serviceID = 'default_service';
-        const templateID = 'template_xzuolh2';
-
-        emailjs.sendForm(serviceID, templateID, this)
-          .then(() => {
-            btn.value = 'Send Email';
-            alert('Sent!');
-          }, (err) => {
-            btn.value = 'Send Email';
-            alert(JSON.stringify(err));
-          });
-      });
-    </script>-->
-    <form id="sendEmail">
+        var serviceID = "service_nrjhsfn"
+        var templateID = "template_nvkjd9x"
+        emailjs.send(serviceID, templateID, params).then(
+          res => {
+            alert('연락주셔서 감사합니다:)');
+          }
+        )
+        .catch();
+      }
+    </script>
+    <!--<form id="sendEmail">
       <ul class="contact-list">
         <li class="contact-item" data-aos="fade-up" data-aos-delay="200">
           <input type="text" placeholder="이름을 입력해주세요" id="fullName" required/>
@@ -424,7 +415,7 @@
       emailForm.addEventListener('submit', SendMail);
 
     </script>
-  </article>
+  </article>-->
 </main>
 
 <div class="js-modal">
@@ -539,9 +530,6 @@
 <script src="assets/js/vendors/dsn-grid.min.js"></script>
 <script src="assets/js/vendors/custom.js"></script>
 <script src="assets/js/main.js"></script>
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
 
 
 </body>

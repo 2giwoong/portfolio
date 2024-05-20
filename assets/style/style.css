@@ -854,7 +854,6 @@ html.edge #custom-cursor-text.more .custom-cursor__txt {
   left: 0;
   top: 0;
   overflow: hidden;
-  background-image: url("../images/main/main-visual-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -984,7 +983,7 @@ html.edge #custom-cursor-text.more .custom-cursor__txt {
   top: 0;
 }
 
-.intro-en__building {
+.intro-desk {
   position: absolute;
   padding: 100px 0;
   box-sizing: border-box;
@@ -997,8 +996,9 @@ html.edge #custom-cursor-text.more .custom-cursor__txt {
   transform: translateY(0px) scale(1);
   transition: transform 1s var(--transition-easing);
 }
-.intro-en__building img {
-  width: 80%;
+.intro-desk img {
+  padding-top: 3vw;
+  width: 70%;
 }
 
 .intro-en__fixed {
@@ -1779,7 +1779,6 @@ img[draggable=false] {
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
 .main-top-section {
-  background-image: url(../images/main/visual-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   /*padding-bottom: 30vh;*/
