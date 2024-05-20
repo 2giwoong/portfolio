@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>FERNNI</title>
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta property="og:title" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<? include "../include/head.html"; ?>
+</head>
+
+<body>
+
+<div class="mainp sub">
+	<? include "../include/header.html"; ?>
+
+	<div class="sub-content" style="overflow: hidden;">
+		<div class="cont">
+			<img src="../assets/images/sub/m_unit.png" class="unit-title">
+			<div class="unit-cont">
+				<div class="unit-area-tit">
+					<div class="unit-tit"><span>부티크 오피스</span>를 위한 최적의 타입</div>
+					<div class="unit-type">84A·84D</div>
+				</div>
+				<div class="unit-area-img">
+					<img src="../assets/images/sub/m_84a.png">
+				</div>
+				<div class="unit-area-desc01">
+					<div class="unit-tit">OWNER SUITE<br><span>84A</span></div>
+					<div class="unit-type">전용면적 : 84.07㎡<br>공급면적 : 111.55㎡</div>
+				</div>
+				<div class="unit-area-desc02">
+					<div class="unit-tit">다양한 업종과 규모의 기업을 폭넓게 수용할 수 있는<br>넓은 리빙룸 공간부터 슬라이딩 도어 하나로 대표실, 회의실 등<br>다양한 변신이 가능한 오피스 공간을 만나보세요.</div>
+					<div id="unit-84a" class="unit-area-btn">
+						<img src="../assets/images/sub/unit-btn.png">
+					</div>
+				</div>
+			</div>
+			<div class="unit-cont line">
+				<div class="unit-area-img">
+					<img src="../assets/images/sub/m_84d.png">
+				</div>
+				<div class="unit-area-desc01">
+					<div class="unit-tit">OWNER SUITE<br><span>84D</span></div>
+					<div class="unit-type">전용면적 : 84.89㎡<br>공급면적 : 112.94㎡</div>
+				</div>
+				<div class="unit-area-desc02">
+					<div class="unit-tit">바야흐로 N잡러의 시대, 목적별로 분리 활용 가능한<br>2개의 독립된 공간과 다이닝과 리빙이 결합돼 파티룸으로 활용 가능한<br>트렌디한 오피스 공간을 경험해보세요.</div>
+					<div id="unit-84d" class="unit-area-btn">
+						<img src="../assets/images/sub/unit-btn.png">
+					</div>
+				</div>
+			</div>
+
+			<div class="unit-cont type2">
+				<div class="unit-area-tit">
+					<div class="unit-tit"><span>럭셔리 라이프</span>를 위한 최적의 타입</div>
+					<div class="unit-type">50B·58C·27E</div>
+				</div>
+				<div class="unit-area-img">
+					<img src="../assets/images/sub/m_50b.png">
+				</div>
+				<div class="unit-area-desc01">
+					<div class="unit-tit">PREMIUM SUITE<br><span>50B</span></div>
+					<div class="unit-type">전용면적 : 50.86㎡<br>공급면적 : 69.79㎡</div>
+				</div>
+				<div class="unit-area-desc02">
+					<div class="unit-tit">거실공간과 방의 완벽한 분리로 각각의 개성을 극대화<br>독특한 구조로 입주자의 개성과 취향이 돋보이는 공간<br>가장 스타일리쉬한 여의도라이프를 즐겨보세요.</div>
+					<div id="unit-50b" class="unit-area-btn">
+						<img src="../assets/images/sub/unit-btn.png">
+					</div>
+				</div>
+			</div>
+			<div class="unit-cont line type2">
+				<div class="unit-area-img">
+					<img src="../assets/images/sub/m_58c.png">
+				</div>
+				<div class="unit-area-desc01">
+					<div class="unit-tit">AWESOME SUITE<br><span>58C</span></div>
+					<div class="unit-type">전용면적 : 58.00㎡<br>공급면적 : 79.05㎡</div>
+				</div>
+				<div class="unit-area-desc02">
+					<div class="unit-tit">거실을 중심으로 양끝에 침실을 배치한 대칭형 구조<br>각각의 프라이버시를 지켜주는 공간배치 실생활에 최적화된<br>다이닝과 거실 균형잡힌 럭셔리를 느껴보세요.</div>
+					<div id="unit-58c" class="unit-area-btn">
+						<img src="../assets/images/sub/unit-btn.png">
+					</div>
+				</div>
+			</div>
+			<div class="unit-cont line type2">
+				<div class="unit-area-img">
+					<img src="../assets/images/sub/m_27e.png">
+				</div>
+				<div class="unit-area-desc01">
+					<div class="unit-tit">STANDARD SUITE<br><span>27E</span></div>
+					<div class="unit-type">전용면적 : 27.48㎡<br>공급면적 : 49.06㎡</div>
+				</div>
+				<div class="unit-area-desc02">
+					<div class="unit-tit">분리형 스튜디오 타입의 심플한 공간구성<br>1인가구 또는 신혼부부들을 위한 최적화 빌트인<br>심플하면서 럭셔리한 공간에서 직주근접형 라이프를 즐기세요.</div>
+					<div id="unit-27e" class="unit-area-btn">
+						<img src="../assets/images/sub/unit-btn.png">
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="unit-desc-wrap 84a">
+			<div class="unit-bg"></div>
+			<div class="unit-desc-area">
+				<img src="../assets/images/sub/m_unit_84a.png">
+			</div>
+			<div id="unit-84a-close" class="close-btn">
+				<img src="../assets/images/sub/unit-btn-close.png">
+			</div>
+		</div>
+		<div class="unit-desc-wrap 84d">
+			<div class="unit-bg"></div>
+			<div class="unit-desc-area">
+				<img src="../assets/images/sub/m_unit_84d.png">
+			</div>
+			<div id="unit-84d-close" class="close-btn">
+				<img src="../assets/images/sub/unit-btn-close.png">
+			</div>
+		</div>
+		<div class="unit-desc-wrap 50b">
+			<div class="unit-bg"></div>
+			<div class="unit-desc-area">
+				<img src="../assets/images/sub/m_unit_50b.png">
+			</div>
+			<div id="unit-50b-close" class="close-btn">
+				<img src="../assets/images/sub/unit-btn-close.png">
+			</div>
+		</div>
+		<div class="unit-desc-wrap 58c">
+			<div class="unit-bg"></div>
+			<div class="unit-desc-area">
+				<img src="../assets/images/sub/m_unit_58c.png">
+			</div>
+			<div id="unit-58c-close" class="close-btn">
+				<img src="../assets/images/sub/unit-btn-close.png">
+			</div>
+		</div>
+		<div class="unit-desc-wrap 27e">
+			<div class="unit-bg"></div>
+			<div class="unit-desc-area">
+				<img src="../assets/images/sub/m_unit_27e.png">
+			</div>
+			<div id="unit-27e-close" class="close-btn">
+				<img src="../assets/images/sub/unit-btn-close.png">
+			</div>
+		</div>
+
+	</div>
+
+<script>
+$(function() {
+  $('#unit-84a').on('click', function () {
+    $('.unit-desc-wrap.84a').addClass('is--open');
+    $('body').css('overflow', 'hidden');
+  })
+  $('#unit-84a-close').on('click', function () {
+    $('.unit-desc-wrap.84a').removeClass('is--open');
+    $('body').css('overflow', 'auto');
+  })
+  
+  $('#unit-84d').on('click', function () {
+    $('.unit-desc-wrap.84d').addClass('is--open');
+    $('body').css('overflow', 'hidden');
+  })
+  $('#unit-84d-close').on('click', function () {
+    $('.unit-desc-wrap.84d').removeClass('is--open');
+    $('body').css('overflow', 'auto');
+  })
+  
+  $('#unit-50b').on('click', function () {
+    $('.unit-desc-wrap.50b').addClass('is--open');
+    $('body').css('overflow', 'hidden');
+  })
+  $('#unit-50b-close').on('click', function () {
+    $('.unit-desc-wrap.50b').removeClass('is--open');
+    $('body').css('overflow', 'auto');
+  })
+  
+  $('#unit-58c').on('click', function () {
+    $('.unit-desc-wrap.58c').addClass('is--open');
+    $('body').css('overflow', 'hidden');
+  })
+  $('#unit-58c-close').on('click', function () {
+    $('.unit-desc-wrap.58c').removeClass('is--open');
+    $('body').css('overflow', 'auto');
+  })
+  
+  $('#unit-27e').on('click', function () {
+    $('.unit-desc-wrap.27e').addClass('is--open');
+    $('body').css('overflow', 'hidden');
+  })
+  $('#unit-27e-close').on('click', function () {
+    $('.unit-desc-wrap.27e').removeClass('is--open');
+    $('body').css('overflow', 'auto');
+  })
+})
+</script>
+
+	<? include "../include/footer.html"; ?>
+</div>
+
+</body>
+</html>

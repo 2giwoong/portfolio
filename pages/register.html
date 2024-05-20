@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>FERNNI 관심고객등록</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-navbutton-color" content="#000000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta id="meta_og_image" property="og:image" content="assets/images/common/p_og_image.png">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="627">
+  <meta name="keywords" content="FERNNI 프리미엄">
+  <meta name="application-name" content="FERNNI 프리미엄">
+  <meta name="msapplication-tooltip" content="FERNNI 프리미엄">
+  <meta id="meta_og_title" property="og:title" content="FERNNI 프리미엄">
+  <meta name="description" content="FERNNI 사업개요">
+  <meta property="og:description" content="FERNNI 프리미엄">
+  <? include "../include/head.html"; ?>
+  <script src="/assets/js/vendors/jquery.rwdImageMaps.min.js"></script>
+  <style>
+    .content-modal {
+
+    }
+    .register-modal-content {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 1400px;
+    }
+    .content-modal .content-img {
+    }
+    .close-modal-button {
+      position: static;
+      width: auto;
+      height: auto;
+      margin-left: auto;
+    }
+  </style>
+</head>
+<body>
+<div class="sub">
+  <? include "../include/header.html"; ?>
+
+  <!-- <div class="sub-top-bg">
+    <div class="sub-top__description">
+      <label class="impact">ABOUT FERRNI</label>
+      <h1 class="tit">
+        OVERVIEW
+      </h1>
+      <p class="desc">
+        <span class="">라이프스타일을 고려한 매력적인 5개 TYPE</span>
+        선택받은 단 60세대만을 위한 <b class="eng">LIMITED EDITION</b>
+      </p>
+    </div>
+    <div class="bg"></div>
+  </div> -->
+
+  <div class="sub-content-area">
+    <div class="sub-content-content">
+      <img src="../assets/images/sub/register.png" alt="" data-aos="fade-up" data-aos-duration="1500" usemap="#image-map">
+      <map name="image-map">
+        <area target="" alt="" class="js-register-popup-button" title="" href="javascript:void(0)" coords="1227,333,1399,386" shape="rect">
+      </map>
+    </div>
+  </div>
+</div>
+<div class="js-modal">
+  <div class="content-modal js-register-modal js-modal-content location-popup-modal">
+    <div class="register-modal-content">
+      <button class="js-close-button close-modal-button">
+        <img src="/assets/images/sub/register-popup-close.png" alt="">
+      </button>
+      <img src="/assets/images/sub/register-popup-img.png" alt="">
+    </div>
+
+  </div>
+</div>
+<script>
+  $(function (){
+    $('img[usemap]').rwdImageMaps()
+		$('.sub-btn-wrap').remove()
+    const tl = gsap.timeline({ defaults: { duration: 0.5, ease: 'myEaseSmooth' } })
+    const body = document.querySelector('.body-responsive')
+    const targetModal = document.querySelector('.js-register-modal')
+    $('.header-bottom-item:first-child a').addClass('active')
+    $('.js-register-popup-button').on('click', function (){
+      gsap.set(body, { overflow: 'hidden' })
+      tl.to(targetModal, { display: 'flex', autoAlpha: 1 })
+    })
+    $('.js-close-button').on('click', function (){
+      tl.to(targetModal, { display: 'none', autoAlpha: 0 })
+      gsap.set(body, { overflow: 'auto' })
+    })
+  })
+</script>
+<? include "../include/footer.html"; ?>
+</body>
+</html>

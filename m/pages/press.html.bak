@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>FERNNI</title>
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta property="og:title" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<? include "../include/head.html"; ?>
+<link rel="stylesheet" href="/reservation/assets/css/media.css">
+</head>
+
+<body>
+
+<div class="mainp sub">
+	<? include "../include/header.html"; ?>
+
+	<div class="sub-content" style="padding: 80px 10px 0px;">
+		<div class="cont">
+			<h2>PRESS</h2>
+			<table class="board-list">
+				<tr class="tit">
+					<td class="no">번호</td>
+					<td class="media">매체</td>
+					<td class="subject">제목</td>
+					<td class="date">등록일</td>
+				</tr>
+
+<?
+$tname = "reg_media";
+$num_per_page = 6;
+
+$cntRcd = Board_countRecord($db, $tname, $key, $keystring, $num_per_page, $page, $category);
+$Qstring= "SELECT * FROM $tname where idx!='' $cate_query order by idx desc LIMIT $cntRcd[0],$num_per_page";
+
+$res = $db->Query($Qstring);
+$cnt = 0;
+while($row = mysql_fetch_array($res))
+{
+	if(($cnt%2) == 0){
+		$classStyle = "list_value2";
+	}else{
+		$classStyle = "list_value1";
+	}
+
+	$Date = date("Y.m.d",$row[regdate]);
+	$Date2 = date("H:i:s",$row[regdate]);
+
+	$media_name = $row[media_name];
+	$content = $row[content];
+	$reg_date = $row[reg_date];
+	$reg_link = $row[reg_link];
+
+	if(($cnt%4) == 0){
+		$dataDelay = "0";
+	}else if(($cnt%4) == 1){
+		$dataDelay = "200";
+	}else if(($cnt%4) == 2){
+		$dataDelay = "300";
+	}else if(($cnt%4) == 3){
+		$dataDelay = "400";
+	}
+?>
+
+				<tr>
+					<td><?=$cntRcd[4]?></td>
+					<td><?=$row[media_name]?></td>
+					<td style="text-align: left"><a href="<?=$row[reg_link]?>" target="_blank"><?=strcut_utf8(stripslashes($row[subject]), 20)?></a></td>
+					<td><?=$Date?></td>
+				</tr>
+
+<?
+$cnt++;
+$cntRcd[4]--;
+}
+if($cnt==0){
+	echo "
+		  <li style='width:100%; padding: 160px 0; text-align:center'>등록된 내용이 없습니다.</li>
+	";
+}
+?>
+
+			</table>
+
+						<div class="list-bottom" style="text-align: center;">
+							<ul class="pagination">
+								<?=Admin_pageNumber($cntRcd[3], $page_per_block, $page, $tname, $key, $keystring, $fpath, $method, $category);?>
+							</ul>
+						</div>
+		</div>
+	</div>
+
+	<? include "../include/footer.html"; ?>
+</div>
+
+</body>
+</html>

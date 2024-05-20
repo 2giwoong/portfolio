@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>FERNNI 오시는길</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-navbutton-color" content="#000000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta id="meta_og_image" property="og:image" content="assets/images/common/p_og_image.png">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="627">
+  <meta name="keywords" content="FERNNI 오시는길">
+  <meta name="application-name" content="FERNNI 오시는길">
+  <meta name="msapplication-tooltip" content="FERNNI 오시는길">
+  <meta id="meta_og_title" property="og:title" content="FERNNI 오시는길">
+  <meta name="description" content="FERNNI 오시는길">
+  <meta property="og:description" content="FERNNI 오시는길">
+  <? include "../include/head.html"; ?>
+  <style>
+    .content-modal .content-img {
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+<div class="sub">
+  <? include "../include/header.html"; ?>
+
+  <div class="sub-top-bg">
+    <div class="sub-top__description">
+      <label class="impact">ABOUT FERNNI</label>
+      <h1 class="tit">
+        LOCATION
+      </h1>
+      <p class="desc">
+        <span class="">강남, 서초, 한남 그 뒤를 잇는 최고의 입지</span>
+        앞으로가 더 기대되는 여의도의 미래가치 <b class="eng">그 중심에 페르니</b>
+      </p>
+    </div>
+    <div class="bg"></div>
+  </div>
+  <div class="sub-content-area">
+    <div class="sub-content-content">
+      <div class="environment-section" >
+        <img src="/assets/images/main/environment-text.png" alt="" class="environment-text" data-aos="fade-up" data-aos-duration="1000">
+        <ul class="environment-list">
+          <li class="environment-list-item item1 js-modal-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-modal-id="location-popup1"></li>
+          <li class="environment-list-item item2 js-modal-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-modal-id="location-popup2"></li>
+          <li class="environment-list-item item3 js-modal-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-modal-id="location-popup3"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ <!-- <img src="../assets/images/sub/location.png" alt=""> -->
+  <div class="js-modal">
+    <div class="content-modal js-location-popup1-modal js-modal-content location-popup-modal">
+      <div class="location-popup-content">
+        <img src="/assets/images/sub/location-popup01.jpg" alt="" class="content-img">
+        <button class="js-close-button close-modal-button"></button>
+      </div>
+    </div>
+    <div class="content-modal js-location-popup2-modal js-modal-content location-popup-modal">
+      <div class="location-popup-content">
+        <img src="/assets/images/sub/location-popup02.jpg" alt="" class="content-img">
+        <button class="js-close-button close-modal-button"></button>
+      </div>
+    </div>
+    <div class="content-modal js-location-popup3-modal js-modal-content location-popup-modal">
+      <div class="location-popup-content">
+        <img src="/assets/images/sub/location-popup03.jpg" alt="" class="content-img">
+        <button class="js-close-button close-modal-button"></button>
+      </div>
+    </div>
+  </div>
+</div>
+<? include "../include/footer.html"; ?>
+<script>
+  $(function (){
+    const select = (e) => document.querySelector(e)
+    const selectID = (e) => document.getElementById(e)
+    const selectAll = (e) => document.querySelectorAll(e)
+
+    $('.header-bottom-item:nth-child(3) a').addClass('active')
+    function modalHandler () {
+      const modalContainer = selectAll('.js-modal-container')
+      const modalContent = selectAll('.js-modal-content')
+      const body = select('.body-responsive')
+
+      modalContainer.forEach((container) => {
+        const tl = gsap.timeline({ defaults: { duration: 0.5, ease: 'myEaseSmooth' } })
+
+        container.addEventListener('click', () => {
+          const id = container.getAttribute('data-modal-id')
+          const targetModal = document.querySelector(`.js-${ id }-modal`)
+          gsap.set(body, { overflow: 'hidden' })
+          tl.to(targetModal, { display: 'flex', autoAlpha: 1 })
+        })
+      })
+
+      modalContent.forEach((content) => {
+        const tl = gsap.timeline({ defaults: { duration: 0.5, ease: 'myEaseSmooth' } })
+
+        const closeButton = content.querySelector('.js-close-button')
+        const topButton = content.querySelector('.js-go-top-button')
+
+        if (closeButton) {
+          closeButton.addEventListener('click', () => {
+            tl.to(content, { display: 'none', autoAlpha: 0 })
+          })
+        }
+
+        if (topButton) {
+          topButton.addEventListener('click', () => {
+            tl.to(content, { duration: 0.3, scrollTo: { y: 0 } })
+          })
+        }
+
+      })
+    }
+    modalHandler()
+  })
+</script>
+</body>
+</html>
