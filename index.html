@@ -337,9 +337,6 @@
           <input id="sendername" type="text" placeholder="이름을 입력해주세요"  />
         </li>
         <li class="contact-item" >
-          <input id="to" type="text" placeholder="이메일 주소를 입력해주세요"  />
-        </li>
-        <li class="contact-item" >
           <input id="subject" type="text" placeholder="제목을 입력해주세요"  />
         </li>
         <li class="contact-item">
@@ -354,15 +351,10 @@
     <script>
       function sendMail() {
         var sendernameInput = document.querySelector("#sendername");
-        var toInput = document.querySelector("#to");
         var subjectInput = document.querySelector("#subject");
         var messageInput = document.querySelector("#message");
         if (!sendernameInput.value) {
           alert('이름을 입력해주세요:)');
-          return;
-        }
-        if (!toInput.value || !toInput.validity.valid) {
-          alert('올바른 이메일 주소를 입력해주세요:)');
           return;
         }
         if (!subjectInput.value) {
@@ -378,7 +370,6 @@
         })();
         var params = {
           sendername: document.querySelector("#sendername").value,
-          to: document.querySelector("#to").value,
           subject: document.querySelector("#subject").value,
           message: document.querySelector("#message").value,
         }
