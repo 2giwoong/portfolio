@@ -83,15 +83,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-family: "NotoSansKR", sans-serif, "Malgun Gothic", "맑은 고딕", AppleSDGothicNeo, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   font-size: 16px;
 }
 
-@media all and (max-width: 910px) {
+@media (max-width: 1200px) {
   html {
-    font-size: 14px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; 
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
   }
 }
 
@@ -928,12 +941,19 @@ html.edge #custom-cursor-text.more .custom-cursor__txt {
   left: 50%;
   top: 50%;
   z-index: 1;
+  display: block;
+  width: 100%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 300;
   letter-spacing: -0.05em;
   text-align: center;
+}
+@media screen and (max-width:768px) {
+  .main-section-visual .main-text-area {
+    font-size: 1.333rem;
+  }
 }
 .loading {
   position: fixed;
@@ -1128,9 +1148,14 @@ img[draggable=false] {
   box-sizing: border-box;
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1200px) {
   .main-section-info {
     padding: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-section-info {
+    padding: 10vw 6vw;
   }
 }
 .main-section-info .info-list {
@@ -1151,11 +1176,24 @@ img[draggable=false] {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4vw;
-  height: calc(4vw* 1.7430);
+  width: 80px;
+  height: calc(80px* 1.7430);
   margin: .2vw;
   position: relative;
   background-color: #9c88ff;
+}
+@media screen and (max-width:768px) {
+  .main-section-info .info-list {
+    flex-direction: column;
+  }
+  .main-section-info .info-list .info-item {
+    width: 100%;
+    padding-bottom: 3vw;
+  }
+  .main-section-info .info-list .info-item i {
+    width: 15vw;
+    height: calc(15vw* 1.7430);
+  }
 }
 .main-section-info .info-list .info-item i::before {
   content: ''; 
@@ -1197,6 +1235,12 @@ img[draggable=false] {
   text-align: center;
   font-weight: 300;
 }
+@media screen and (max-width: 768px) {
+  .main-section-info .info-list .info-item i span:before {
+    font-size: 2.5rem;
+  }
+
+}
 .main-section-info .bottom {
   display: flex;
   align-items: center;
@@ -1207,6 +1251,7 @@ img[draggable=false] {
   background-color: rgba(255, 255, 255, 1);
   border: 2px solid #9c88ff;
 }
+
 .main-section-info .bottom .self-content {
   display: flex;
   flex-direction: column;
@@ -1318,6 +1363,34 @@ img[draggable=false] {
 .main-section-info.active .bottom .skill-list .skill-item:nth-child(10) b::after  {
   width: 30%;
   transition-delay: 1.6; 
+}
+@media screen and (max-width: 768px) {
+  .main-section-info .bottom {
+    flex-direction: column;
+    padding: 10vw 6vw;
+    gap: 5vw;
+    box-sizing: border-box;
+  }
+  .main-section-info .bottom .self-content {
+    width: 100%;
+    flex-direction: row;
+  }
+  .main-section-info .bottom .skill-list {
+    width: 100%;
+    padding: 0;
+  }
+  .main-section-info .bottom .skill-list .skill-item {
+    height: 6vw;
+  }
+  .main-section-info .bottom .skill-list .skill-item span {
+    font-size: 0.8333rem;
+  }
+  .main-section-info .bottom .self-content .desc {
+    padding: 0 0 0 2vw;
+  }
+  .main-section-info .bottom .self-content .desc span {
+    font-size: 0.8333rem;
+  }
 }
 .main-section-persona .main-section-header .main-section__description,
 .main-section-location .main-section-header .main-section__description {
@@ -1730,7 +1803,12 @@ img[draggable=false] {
   font-weight: normal;
   font-family: "minerva-modern", "NotoSansKR", "NotoSansKR", AppleSDGothicNeo, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
-
+@media screen and (max-width:768px) {
+  .main-section-contact .main-section-header .main-section__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
 .main-section-contact .contact-list {
   display: flex;
   flex-direction: column;
@@ -1780,7 +1858,15 @@ img[draggable=false] {
   font-size: 16px;
   margin: auto;
 }
-
+@media screen and (max-width:768px) {
+  .main-section-contact {
+    padding: 30vw 6vw 15vw;
+  }
+  .main-section-contact .contact-list .contact-item button {
+    width: 100%;
+    height: 3rem;
+  }
+}
 
 /*new*/
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
