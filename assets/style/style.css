@@ -319,6 +319,7 @@ body.is--overflow-hidden {
 
 /* 상단 헤더 */
 .header {
+  display: none;
   position: fixed;
   top: 0;
   width: 100%;
@@ -985,6 +986,7 @@ html.edge #custom-cursor-text.more .custom-cursor__txt {
 }
 
 .first-section-clipped {
+  opacity: 0;
   position: absolute;
   left: 0;
   top: 0;
